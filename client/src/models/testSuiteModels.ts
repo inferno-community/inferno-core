@@ -103,6 +103,7 @@ export type TestSuite = Runnable & {
   configuration_messages?: Message[];
   version?: string;
   presets?: PresetSummary[];
+  suite_options?: SuiteOption[];
 };
 
 export interface TestSession {
@@ -140,4 +141,16 @@ export interface OAuthCredentials {
 export interface PresetSummary {
   id: string;
   title: string;
+}
+
+export interface SuiteOption {
+  id: string;
+  title: string;
+  description: string;
+  list_options: SuiteOptionChoice[];
+}
+
+export interface SuiteOptionChoice {
+  label: string;
+  value: string;
 }

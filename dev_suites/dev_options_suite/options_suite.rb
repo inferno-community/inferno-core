@@ -8,7 +8,7 @@ module OptionsSuite
       id :v1_test
 
       run do
-        assert suite_options[:ig_version] == '1'
+        assert suite_options[:ig_version] == '1', "Expected suite_options[:ig_version] to be '1' but found '#{suite_options[:ig_version]}'"
       end
     end
   end
@@ -22,7 +22,7 @@ module OptionsSuite
       id :v2_test
 
       run do
-        assert suite_options[:ig_version] == '2'
+        assert suite_options[:ig_version] == '2', "Expected suite_options[:ig_version] to be '2' but found '#{suite_options[:ig_version]}'"
       end
     end
   end

@@ -4,6 +4,7 @@ import { StyledEngineProvider } from '@mui/material/styles';
 import { postTestSessions } from 'api/TestSessionApi';
 import { getTestSuites } from 'api/TestSuitesApi';
 import LandingPage from 'components/LandingPage';
+import SuiteOptionsPage from 'components/SuiteOptionsPage';
 import TestSessionWrapper from 'components/TestSuite/TestSessionWrapper';
 import ThemeProvider from 'components/ThemeProvider';
 import { TestSession, TestSuite } from 'models/testSuiteModels';
@@ -52,6 +53,9 @@ const App: FC<unknown> = () => {
               ) : (
                 <LandingPage testSuites={testSuites} />
               )}
+            </Route>
+            <Route path="/test_suites/:test_suite_id">
+              <SuiteOptionsPage testSuites={testSuites} />
             </Route>
             <Route path="/test_sessions/:test_session_id">
               <TestSessionWrapper />

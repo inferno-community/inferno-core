@@ -11,6 +11,9 @@ module Inferno
           field :input_instructions
           field :test_count
           field :version
+          field :suite_options do |option|
+            option.suite_options.to_a.map{|a| {id: a[0]}.merge(a[1])}
+          end
           association :presets, view: :summary, blueprint: Preset
         end
 
