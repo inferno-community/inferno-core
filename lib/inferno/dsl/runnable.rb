@@ -248,10 +248,15 @@ module Inferno
       #
       # @param new_short_description [String]
       # @return [String] the one-sentence description
-      def short_description(new_short_description = nil)
-        return @short_description if new_short_description.nil?
+      def short_description(_new_short_description = nil)
+        unless @short_description_deprecation_warning_shown
+          Inferno::Application['logger'].info(
+            "`#{id}`: `short_description` has been deprecated and may be removed in a future version of `inferno`."
+          )
+        end
 
-        @short_description = format_markdown(new_short_description)
+        @short_description_deprecation_warning_shown = true
+        nil
       end
 
       # Set/Get a runnable's input instructions
