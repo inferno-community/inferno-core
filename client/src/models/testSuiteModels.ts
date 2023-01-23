@@ -72,7 +72,6 @@ export type Runnable = {
   title: string;
   short_title?: string;
   description?: string | null;
-  short_description?: string;
   result?: Result;
   inputs: TestInput[];
   optional?: boolean;

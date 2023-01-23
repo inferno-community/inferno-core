@@ -11,7 +11,6 @@ module Inferno
           field :title
           field :short_title
           field :description
-          field :short_description
           field :input_instructions
           field :version
           field :links

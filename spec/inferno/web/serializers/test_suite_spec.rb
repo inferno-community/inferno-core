@@ -9,7 +9,6 @@ RSpec.describe Inferno::Web::Serializers::TestSuite do
       'title',
       'short_title',
       'description',
-      'short_description',
       'input_instructions',
       'test_count',
       'version',
@@ -31,7 +30,6 @@ RSpec.describe Inferno::Web::Serializers::TestSuite do
     expect(serialized_suite['title']).to eq(suite.title)
     expect(serialized_suite['short_title']).to eq(suite.short_title)
     expect(serialized_suite['description']).to eq(suite.description)
-    expect(serialized_suite['short_description']).to eq(suite.short_description)
     expect(serialized_suite['input_instructions']).to eq(suite.input_instructions)
     expect(serialized_suite['test_count']).to eq(suite.test_count)
     expect(serialized_suite['version']).to eq(suite.version)
@@ -53,7 +51,6 @@ RSpec.describe Inferno::Web::Serializers::TestSuite do
     expect(serialized_suite['title']).to eq(suite.title)
     expect(serialized_suite['short_title']).to eq(suite.short_title)
     expect(serialized_suite['description']).to eq(suite.description)
-    expect(serialized_suite['short_description']).to eq(suite.short_description)
     expect(serialized_suite['input_instructions']).to eq(suite.input_instructions)
     expect(serialized_suite['test_count']).to eq(suite.test_count)
     expect(serialized_suite['version']).to eq(suite.version)

@@ -246,6 +246,8 @@ module Inferno
 
       # Set/Get a runnable's short one-sentence description
       #
+      # @deprecated
+      #
       # @param new_short_description [String]
       # @return [String] the one-sentence description
       def short_description(_new_short_description = nil)

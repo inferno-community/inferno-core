@@ -9,7 +9,6 @@ module InfrastructureTest
     title 'Infrastructure Test Suite'
     short_title 'Infrastructure'
     description 'An internal test suite to verify that inferno infrastructure works'
-    short_description 'Internal test suite'
     input_instructions %(
       Instructions for inputs
       * Bulletted List
@@ -53,7 +52,6 @@ module InfrastructureTest
       output :outer_group_output
       short_title 'Outer inline group short title'
       description 'Outer inline group for testing description'
-      short_description 'Outer inline group short description'
 
       def outer_inline_group_helper
         'OUTER_INLINE_GROUP_HELPER'
@@ -81,7 +79,6 @@ module InfrastructureTest
           output :test_output
           short_title 'Inline test 1'
           description 'Inline test 1 full description'
-          short_description 'Inline test 1 short description'
 
           def inline_test1_helper
             'INLINE_TEST1_HELPER'
