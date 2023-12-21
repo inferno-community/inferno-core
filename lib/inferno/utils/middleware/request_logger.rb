@@ -21,6 +21,11 @@ module Inferno
           start = Time.now
           log_request(env)
           begin
+            # env['rack.after_reply'] ||= []
+            # env['rack.after_reply'] << proc do
+            #   require 'debug/open_nonstop'
+            #   debugger
+            # end
             response = app.call(env)
             log_response(response, start, Time.now)
           rescue StandardError => e
