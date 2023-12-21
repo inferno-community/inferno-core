@@ -222,6 +222,50 @@ module Inferno
             tags:
           )
         end
+
+        # @private
+        # WIP
+        def from_rack_env(env, test_session_id:, name: nil, tags: [])
+          uri = URI('http://example.com')
+          uri.scheme = env['rack.url_scheme']
+          uri.host = env['SERVER_NAME']
+          uri.port = env['SERVER_PORT']
+          uri.path = env['REQUEST_PATH']
+          uri.query = env['rack.request.query_string']
+          url = uri.to_s
+
+          verb = env['REQUEST_METHOD']
+          request_body = env['rack.input']
+          request_body = request_body.instance_of?(Puma::NullIO) ? nil : request_body.string
+
+          request_headers =
+            env
+              .select { |key, _| key.start_with? 'HTTP_' }
+              .transform_keys { |key| key.delete_prefix('HTTP_').tr('_', '-').downcase }
+              .map { |header_name, value| Header.new(name: header_name, value:, type: 'request') }
+
+          # response_headers = response[:headers]
+          #   .map { |header_name, value| Header.new(name: header_name.downcase, value:, type: 'response') }
+          # request_body =
+          #   if request.dig(:headers, 'Content-Type')&.include?('application/x-www-form-urlencoded')
+          #     URI.encode_www_form(request[:payload])
+          #   else
+          #     request[:payload]
+          #   end
+
+          new(
+            verb:,
+            url:,
+            direction: 'incoming',
+            name:,
+            status: response[:code].to_i,
+            request_body:,
+            response_body: response[:body],
+            # test_session_id:,
+            headers: request_headers + response_headers,
+            tags:
+          )
+        end
       end
     end
   end
