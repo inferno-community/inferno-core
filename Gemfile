@@ -7,7 +7,8 @@ gemspec
 # To test with the g10 test kit (this also adds the US Core, SMART, and TLS test
 # kits):
 # - Uncomment this line (and change test kit gem as necessary):
-# gem 'onc_certification_g10_test_kit'
+gem 'onc_certification_g10_test_kit',
+    path: '../onc-certification-g10-test-kit'
 
 # - Run `bundle`
 # - Uncomment (and change as necessary) the require at the top of
