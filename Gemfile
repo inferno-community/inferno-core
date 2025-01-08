@@ -12,6 +12,12 @@ gemspec
 # - Run `bundle`
 # - Uncomment (and change as necessary) the require at the top of
 # `dev_suites/dev_demo_ig_stu1/demo_suite.rb`.
+# gem 'onc_certification_g10_test_kit',
+#     path: '../onc-certification-g10-test-kit'
+gem 'smart_app_launch_test_kit',
+    git: 'https://github.com/inferno-framework/smart-app-launch-test-kit.git',
+    branch: 'fi-3093-debug'
+# gem 'us_core_test_kit', path: '../us-core-test-kit'
 
 group :development, :test do
   gem 'debug'

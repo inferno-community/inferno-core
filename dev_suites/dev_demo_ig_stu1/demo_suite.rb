@@ -1,4 +1,5 @@
 # require 'onc_certification_g10_test_kit'
+require 'smart_app_launch_test_kit'
 require_relative 'demo_endpoint'
 require_relative 'groups/demo_group'
 

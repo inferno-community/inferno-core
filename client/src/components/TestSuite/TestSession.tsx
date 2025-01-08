@@ -176,6 +176,7 @@ const TestSessionComponent: FC<TestSessionComponentProps> = ({
   });
 
   const showInputsModal = (runnable: Runnable, runnableType: RunnableType) => {
+    console.log(runnable.inputs);
     setRunnableType(runnableType);
     setInputsRunnable(runnable);
     setInputModalVisible(true);

@@ -179,6 +179,8 @@ export const getAuthFields = (
 
   // If the input contains custom fields, replace default fields
   const fieldsToUpdate = components.map((component) => component.name);
+  console.log("fieldsToUpdate: ");
+  console.log(fieldsToUpdate);
   fields.forEach((field, i) => {
     if (fieldsToUpdate.includes(field.name)) {
       const customComponent = components.find((component) => component.name === field.name);
@@ -188,6 +190,12 @@ export const getAuthFields = (
 
   // Remove extra properties based on auth type or hide if no settings
   const typeValues = authSettings[authType];
+  console.log("authType:")
+  console.log(authType)
+  console.log("authSettings:")
+  console.log(authSettings)
+  console.log("typeValues:")
+  console.log(typeValues)
   if (authSettings && authType) {
     return fields.filter((field) => typeValues.includes(field.name));
   }
