@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/inferno-framework/smart-app-launch-test-kit.git
-  revision: 74e736881f2b16ed53a48872db884370eac64aa2
-  branch: fi-3093-debug
+  revision: bfeeb4e3cd77ae61e7b41c523ff94d457ce7fcc1
+  branch: fi-3093-use-auth-info
   specs:
     smart_app_launch_test_kit (0.5.0.dev)
       json-jwt (~> 1.15.3)

@@ -16,7 +16,7 @@ gemspec
 #     path: '../onc-certification-g10-test-kit'
 gem 'smart_app_launch_test_kit',
     git: 'https://github.com/inferno-framework/smart-app-launch-test-kit.git',
-    branch: 'fi-3093-debug'
+    branch: 'fi-3093-use-auth-info'
 # gem 'us_core_test_kit', path: '../us-core-test-kit'
 
 group :development, :test do
