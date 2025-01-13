@@ -7,7 +7,17 @@ gemspec
 # To test with the g10 test kit (this also adds the US Core, SMART, and TLS test
 # kits):
 # - Uncomment this line (and change test kit gem as necessary):
-# gem 'onc_certification_g10_test_kit'
+gem 'smart_app_launch_test_kit',
+    git: 'https://github.com/inferno-framework/smart-app-launch-test-kit.git',
+    branch: 'fi-3093-use-auth-info'
+
+gem 'us_core_test_kit',
+    git: 'https://github.com/inferno-framework/us-core-test-kit.git',
+    branch: 'fi-3586-migrate-to-authinfo'
+
+gem 'onc_certification_g10_test_kit',
+    git: 'https://github.com/onc-healthit/onc-certification-g10-test-kit.git',
+    branch: 'fi-3587-debug'
 
 # - Run `bundle`
 # - Uncomment (and change as necessary) the require at the top of
